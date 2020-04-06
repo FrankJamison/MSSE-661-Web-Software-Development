@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: lightgray;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    width: 200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+li {
+    padding: 15px;
+    width: 50px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.content {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 75px;
+    margin-bottom: 100px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login {
+    width: 25%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: lightgray;
+}
+
+.footer_text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding: 15px 0;
+    background-color: black;
+    color: white;
+}
+
+.author {
+    padding-left: 15px;
+}
+
+.author a {
+    color: white;
+}
+
+.copyright {
+    padding-right: 25px;
+}
+
+p {
+    padding-bottom: 25px;
+    width: 50%;
+    margin: 0 auto;
+}

@@ -1,6 +1,5 @@
 const mysql = require('mysql');
-const authQueries = require('./queries/auth.queries');
-const tasksQueries = require('./queries/tasks.queries');
+const queries = require('./queries/tasks.queries');
 
 // Get the Host from Environment or use default
 const host = process.env.DB_HOST || 'localhost';
@@ -27,14 +26,9 @@ con.connect(function (err) {
     if (err) throw err;
     console.log('Connected!');
 
-    con.query(authQueries.CREATE_USERS_TABLE, function (err, result) {
+    con.query(queries.CREATE_TASKS_TABLE, function (err, result) {
         if (err) throw err;
-        console.log('Users table created or exists already!');
-    });
-
-    con.query(tasksQueries.CREATE_TASKS_TABLE, function (err, result) {
-        if (err) throw err;
-        console.log('Tasks table created or exists already!');
+        console.log('Table created or exists already!');
     });
 });
 
