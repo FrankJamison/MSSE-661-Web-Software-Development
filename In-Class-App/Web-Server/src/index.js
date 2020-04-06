@@ -4,6 +4,11 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 
 const tasksRoutes = require('./routes/tasks.routes');
+const characterRoutes = require('./routes/character.routes');
+const characterNameRoutes = require('./routes/characterName.routes');
+const characterRaceRoutes = require('./routes/characterRace.routes');
+const characterClassRoutes = require('./routes/characterClass.routes');
+const characterLevelRoutes = require('./routes/characterLevel.routes');
 const authRoutes = require('./routes/auth.routes');
 const userRoutes = require('./routes/user.routes');
 const middleware = require('./middleware/errors.middleware');
@@ -32,6 +37,11 @@ app.use(cors());
 app.use('/api/auth', authRoutes); // http://localhost:3000/api/auth
 app.use('/api/user', userRoutes); // http://localhost:3000/api/users
 app.use('/api/tasks', tasksRoutes); // http://localhost:3000/api/tasks
+app.use('/api/character', characterRoutes);
+app.use('/api/character/name', characterNameRoutes);
+app.use('/api/character/race', characterRaceRoutes);
+app.use('/api/character/class', characterClassRoutes);
+app.use('/api/character/level', characterLevelRoutes);
 
 // Handle 404 requests
 app.use(middleware.error404);

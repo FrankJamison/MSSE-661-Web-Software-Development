@@ -1,6 +1,7 @@
 const mysql = require('mysql');
 const authQueries = require('./queries/auth.queries');
 const tasksQueries = require('./queries/tasks.queries');
+const characterQueries = require('./queries/character.queries');
 
 // Get the Host from Environment or use default
 const host = process.env.DB_HOST || 'localhost';
@@ -35,6 +36,11 @@ con.connect(function (err) {
     con.query(tasksQueries.CREATE_TASKS_TABLE, function (err, result) {
         if (err) throw err;
         console.log('Tasks table created or exists already!');
+    });
+
+    con.query(characterQueries.CREATE_CHARACTERS_TABLE, function (err, result) {
+        if (err) throw err;
+        console.log('Characters table created or exists already!');
     });
 });
 
