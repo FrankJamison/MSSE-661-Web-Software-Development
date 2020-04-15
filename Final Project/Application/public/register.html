@@ -15,19 +15,10 @@
             <div class="header-content">
                 <div class="signup">
                     <ul>
-                        <li><a href="#">Sign-up</a></li>
+                        <li class="indexLogout"><a href="" onclick="doLogout(event)" id="logout">Logout</a></li>
                     </ul>
                 </div>
-                <div class="login">
-                    <form class="login" action="" id="login_form">
-                        <label for="username">Username:</label>
-                        <input id="username" type="text" placeholder="Username">
 
-                        <label for="password">Password:</label>
-                        <input id="password" type="password" placeholder="Password">
-                        <button type="submit" form="login_form" value="Submit" class="button">Submit</button>
-                    </form>
-                </div>
                 <div class="site-title">
                     <ul>
                         <li> AncientWhiteArmyVet's RPG Tools</li>
@@ -38,11 +29,19 @@
                 <hr class="divider-rule header">
             </div>
         </header>
-        <main class="index">
-            <h1>
-                <img onload="this.style.opacity='1';" class="big-logo" src="./images/Old-Ironsides.png"
-                    alt="Old Ironsides Logo" style="opacity: 1;">
-            </h1>
+        <main class="index register">
+            <div class="content register">
+                <div class="center">
+                    <h1>Register</h1>
+                    <form novalidate>
+                        <input id="username" type="text" placeholder="Username" />
+                        <input id="email" type="email" placeholder="Email" />
+                        <input id="password" type="password" placeholder="Password" /><br>
+                        <button onclick="doRegister(event)" class="button">Register</button><br>
+                        <a href="/">Already signed up?</a>
+                    </form>
+                </div>
+            </div>
         </main>
 
         <footer>
@@ -52,6 +51,11 @@
             <div class="copyright">&copy; 2020 Frank Jamison</div>
         </footer>
     </div>
+    <script src="./src/api.config.js"></script>
+    <script src="./src/simple-storage.js"></script>
+    <script src="./src/service-helpers.js"></script>
+    <script src="./src/auth.service.js"></script>
+    <script src="./src/app.js"></script>
 </body>
 
 </html>

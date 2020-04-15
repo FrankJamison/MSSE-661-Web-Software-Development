@@ -110,7 +110,9 @@ nav ul {
     margin-top: 20px;
 }
 
-
+.indexLogout {
+    display: none;
+}
 
 .header-content {
     display: flex;
@@ -252,6 +254,23 @@ main.index .big-logo {
     width: 300px;
     padding: 5px;
     margin: 10px;
+}
+
+.content.register {
+    width: 250px;
+    margin: 100px auto;
+}
+
+.content.register h1 {
+    padding-bottom: 0px;
+}
+
+.content.register input {
+    margin-bottom: 10px;
+}
+
+.content.register button {
+    margin: 10px 0;
 }
 
 .calculated-stats,
