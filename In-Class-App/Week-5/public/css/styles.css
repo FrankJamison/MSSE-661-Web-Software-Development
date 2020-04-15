@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: lightgrey;
+}
+
+li {
+    padding: 0 10px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+h1 {
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+}
+
+h2 {
+    padding-bottom: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}

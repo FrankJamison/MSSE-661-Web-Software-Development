@@ -36,7 +36,7 @@ exports.getTask = function (req, res) {
  * }
  */
 exports.createTask = function (req, res) {
-    con.query(queries.INSERT_TASK, [req.body.name], function (err, result) {
+    con.query(queries.INSERT_TASK, [req.body.user_id, req.body.name], function (err, result) {
         if (err) {
             res.send(err);
         }

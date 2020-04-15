@@ -1,0 +1,22 @@
+.task-item-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.task-checkbox {
+    width: 25px;
+    display: flex;
+}
+
+.task-name,
+.task-status {
+    width: 200px;
+}
+
+.task-status {
+    width: 100px;
+    text-align: right;
+    padding-right: 20px;
+}
