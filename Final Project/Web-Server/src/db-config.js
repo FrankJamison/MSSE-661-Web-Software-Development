@@ -2,11 +2,9 @@ const mysql = require('mysql');
 const {
   CREATE_USERS_TABLE
 } = require('./queries/user.queries');
-
 const {
   CREATE_CHARS_TABLE
 } = require('./queries/char.queries');
-
 const query = require('./utils/query');
 
 // Get the Host from Environment or use default

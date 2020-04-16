@@ -7,6 +7,7 @@
     <title>D&D 5E Ability Generator</title>
     <link href="https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/menu.css">
 </head>
 
 <body>
@@ -15,12 +16,24 @@
             <div class="header-content">
                 <button type="button" class="button logoff" onclick="doLogout(event)" id="logout">Log Off</button>
                 <nav>
-                    <ul>
-                        <li><a href="./home.html">Home</a></li>
-                        <li><a href="./physical-stats.html">Physical Stat Generator</a></li>
-                        <li><a href="./abilities.html">Ability Generator</a></li>
-                        <li><a href="./pregen-characters.html">Pre-Generated Characters</a></li>
-                    </ul>
+                    <div class="menu-wrap">
+                        <input type="checkbox" class="toggler">
+                        <div class="hamburger">
+                            <div></div>
+                        </div>
+                        <div class="menu">
+                            <div>
+                                <div>
+                                    <ul>
+                                        <li><a href="./home.html">Home</a></li>
+                                        <li><a href="./physical-stats.html">Physical Stat Generator</a></li>
+                                        <li><a href="./abilities.html">Ability Generator</a></li>
+                                        <li><a href="./pregen-characters.html">Pre-Generated Characters</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
 
                 <div class="site-title">
