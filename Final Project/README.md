@@ -67,3 +67,73 @@ The abilities.html page is the Ability Generator and is for rolling D&D abilitie
 The physical-stats.html page is the Physical Stat Generator and is for generating random character stats based on character race. This is also currently implemented in JavaScript, but I want to try and make this more integrated with the database.
 
 The final page will be for listing links to pre-generated characters. I haven't gotten this far yet as far as implementation with the database, but I have all of the 9th level characters generated.
+
+### Instructions
+
+This project uses MySQL, so you will need to set up a MySQL database called ancientwhitearmyvet.
+
+Next, you will need to add data to your database.
+
+Run the following script in MySQL Workbench or whereever you add data to your MySQL databases
+
+USE ancientwhitearmyvet;
+
+INSERT INTO characters (charName, charRace, charClass, charSubclass, charLevel, charFileName, charImageName, created_date)
+VALUES (
+'Bentirri Stoneeyes',
+'Gnome, Deep',
+'Artificer',
+'Alchemist',
+9,
+'Artificer 9 [Alchemist] - Bentirri Stoneeyes.pdf',
+'BentirriStoneeyes.jpg',
+CURRENT_TIMESTAMP()
+);
+
+INSERT INTO characters (charName, charRace, charClass, charSubclass, charLevel, charFileName, charImageName, created_date)
+VALUES (
+'Tinker',
+'Warforged',
+'Artificer',
+'Artillerist',
+9,
+'Artificer 9 [Artillerist] - Tinker.pdf',
+'Tinker.png',
+CURRENT_TIMESTAMP()
+);
+
+INSERT INTO characters (charName, charRace, charClass, charSubclass, charLevel, charFileName, charImageName, created_date)
+VALUES (
+'Aerenna Maedona',
+'Elf, Valenar High',
+'Artificer',
+'Battle Smith',
+9,
+'Artificer 9 [Battle Smith] - Aerenna Maedona.pdf',
+'AerennaMaedona.jpg',
+CURRENT_TIMESTAMP()
+);
+
+Next, in VSCode, open the Final Project folder in Explorer.
+
+Right-click on the Application folder and open it in the terminal.
+
+Split the terminal.
+
+In the second terminal window type the command
+
+CD ../web-server
+
+In each terminal window run the command
+
+npm start
+
+Go to http://localhost:4000 in your browser.
+
+Click on Register and register as a new user.
+
+Once registered, log in using your credentials.
+
+Explore the site functionality.
+
+Logout when done.

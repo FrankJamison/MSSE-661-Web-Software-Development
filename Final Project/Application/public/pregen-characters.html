@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" width="device-width, initial-scale=1.0">
+    <title>D&D 5E Pre-generated Characters</title>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-content">
+                <button type="button" class="button logoff" onclick="doLogout(event)" id="logout">Log Off</button>
+                <nav>
+                    <ul>
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./physical-stats.html">Physical Stat Generator</a></li>
+                        <li><a href="./abilities.html">Ability Generator</a></li>
+                        <li><a href="./pregen-characters.html">Pre-Generated Characters</a></li>
+                    </ul>
+                </nav>
+
+                <div class="site-title">
+                    <ul>
+                        <li> AncientWhiteArmyVet's RPG Tools</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="divider header-divider">
+                <hr class="divider-rule header">
+            </div>
+        </header>
+        <main id="pregens">
+            <div class="container features">
+                <h1>D&amp;D 5E Pre-Generated Characters</h1>
+                <h2>For those of you who play D&D at SoCal Games and Comics in Temecula, here are some of the pregens I
+                    have made for you to use at store events.</h2>
+                <div class="heading-divider">
+                    <p>&nbsp;<br>&nbsp;</p>
+                </div>
+
+                <div class="content">
+                    <div id="characters">
+                        <div>Loading...</div>
+                    </div>
+                </div>
+
+        </main>
+
+        <footer>
+            <div class="divider footer">
+                <hr class="divider-rule">
+            </div>
+            <div class="copyright">&copy; 2020 Frank Jamison</div>
+        </footer>
+    </div>
+</body>
+<script src="./src/api.config.js"></script>
+<script src="./src/simple-storage.js"></script>
+<script src="./src/service-helpers.js"></script>
+<script src="./src/auth.service.js"></script>
+<script src="./src/char.service.js"></script>
+<script src="./src/route-guard.js"></script>
+<script src="./src/build-character-list.js"></script>
+<script src="./src/app.js"></script>
+<script src="./src/jquery-1.12.4.min.js"></script>
+<script src="./src/races.js"></script>
+<script src="./src/physicalCharacteristics.js"></script>
+
+</html>

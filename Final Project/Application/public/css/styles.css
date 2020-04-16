@@ -345,3 +345,123 @@ footer {
     padding: 25px 15px 25px 0;
     text-align: center;
 }
+
+#pregens h2,
+#pregens h3 {
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+#pregens h3 {}
+
+#pregens p {
+    font-size: 1em;
+    color: #BBB7AF;
+    text-align: center;
+}
+
+#pregens img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+#pregens a {
+    display: inline-block;
+    padding: 0.8em 1em 0.6em;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    background-color: #aaa;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*---------- CARDS LAYOUT ----------*/
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.cards_item {
+    display: flex;
+    margin-top: 0;
+    padding: 0 1em 2em;
+}
+
+.no-flexbox .cards_item {
+    float: left;
+}
+
+@media screen and (min-width: 42em) and (max-width: 60em) {
+    .cards_item {
+        width: 50%;
+    }
+
+    .no-flexbox .cards_item:nth-child(2n+1) {
+        clear: both;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .cards_item {
+        width: 30%;
+    }
+
+    .no-flexbox .cards_item:nth-child(3n+1) {
+        clear: both;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #383838;
+    border: 0 solid #eee;
+    border-radius: 0;
+}
+
+.card_image img {
+    width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.card_content {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    margin-top: 0;
+    padding: 1.0em;
+}
+
+.card_content p {
+    flex: 1 0 auto;
+}
+
+.card_content h2,
+.card_content h3,
+.card_content p {
+    font-family: "Cinzel Decorative", "Palatino Light", Times, Times New Roman, Georgia, serif;
+    font-size: 1em;
+}
+
+.card_heading {
+    color: #ecd19a;
+    margin-top: 10px;
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+.card_subheading {
+    color: #ecd19a;
+    margin-top: 0;
+    font-size: .8rem;
+    line-height: 1.5;
+}

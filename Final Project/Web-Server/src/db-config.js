@@ -3,6 +3,10 @@ const {
   CREATE_USERS_TABLE
 } = require('./queries/user.queries');
 
+const {
+  CREATE_CHARS_TABLE
+} = require('./queries/char.queries');
+
 const query = require('./utils/query');
 
 // Get the Host from Environment or use default
@@ -48,8 +52,18 @@ const connection = async () =>
     }
   );
 
+  const charsTableCreated = await query(_con, CREATE_CHARS_TABLE).catch(
+    (err) => {
+      console.log(err);
+    }
+  );
+
   if (!!userTableCreated) {
     console.log('User Table Created!');
+  }
+
+  if (!!charsTableCreated) {
+    console.log('Characters Table Created!');
   }
 })();
 
