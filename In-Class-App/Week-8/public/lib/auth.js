@@ -5,8 +5,17 @@ const doLogin = async (e) => {
   const password = document.getElementById('formInputPassword').value;
 
   try {
-    const res = await authService.login({ username, password });
-    const { auth, expires_in, access_token, refresh_token, msg } = res;
+    const res = await authService.login({
+      username,
+      password
+    });
+    const {
+      auth,
+      expires_in,
+      access_token,
+      refresh_token,
+      msg
+    } = res;
     const expiryDate = authService.setExpiration(expires_in);
 
     if (auth) {
@@ -15,7 +24,7 @@ const doLogin = async (e) => {
       setStorage('access_token', access_token);
       setStorage('refresh_token', refresh_token);
 
-      window.location.href = 'todo/todo.html';
+      window.location.href = 'characters/characters.html';
     } else {
       console.log(msg);
       alert(msg);

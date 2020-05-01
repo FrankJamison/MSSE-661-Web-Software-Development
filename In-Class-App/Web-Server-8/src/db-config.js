@@ -5,6 +5,9 @@ const {
 const {
   CREATE_TASKS_TABLE
 } = require('./queries/tasks.queries');
+const {
+  CREATE_CHARACTERS_TABLE
+} = require('./queries/character.queries');
 const query = require('./utils/query');
 
 // Get the Host from Environment or use default
@@ -56,7 +59,13 @@ const connection = async () =>
     }
   );
 
-  if (!!userTableCreated && !!tasksTableCreated) {
+  const characterTableCreated = await query(_con, CREATE_CHARACTERS_TABLE).catch(
+    (err) => {
+      console.log(err);
+    }
+  );
+
+  if (!!userTableCreated && !!tasksTableCreated && !!characterTableCreated) {
     console.log('Tables Created!');
   }
 })();
